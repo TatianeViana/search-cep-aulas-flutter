@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:search_cep/services/via_cep_service.dart';
+import 'package:search_cep/temas/themes_black.dart';
+import 'package:search_cep/temas/themes_light.dart';
+import 'package:share/share.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -23,7 +28,26 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consultar CEP'),
+        actions: <Widget>[IconButton(
+                    icon: Icon(Icons.lightbulb_outline),
+                    onPressed: () {
+                      if (Theme.of(context).brightness == Brightness.light){
+                        DynamicTheme.of(context).setThemeData(myThemeLight);
+                      }
+                      else{
+                        DynamicTheme.of(context).setThemeData(myThemeBlack);                        
+                      }
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.share),
+                    onPressed: (){
+                      Share.share("CEP: ${_searchCepController.text}");
+                    },
+                  )],
+                ),
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20.0),
         child: Column(
