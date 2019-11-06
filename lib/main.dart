@@ -6,6 +6,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
 
 
 
+
 /*void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -17,7 +18,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
   ));
 }*/
 
-class MyColorfulApp extends StatelessWidget {
+class MyThemesApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
         return DynamicTheme(
@@ -37,6 +38,6 @@ class MyColorfulApp extends StatelessWidget {
 
 void main() {
   runApp(
-    MyColorfulApp()
+    MyThemesApp()
     );
 }

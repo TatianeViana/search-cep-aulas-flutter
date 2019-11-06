@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:search_cep/services/via_cep_service.dart';
 import 'package:search_cep/temas/themes_black.dart';
 import 'package:search_cep/temas/themes_light.dart';
-import 'package:share/share.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
+import 'package:share/share.dart';
+  
 
 
 class HomePage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   )],
                 ),
-      ),
+    ),
 
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20.0),
