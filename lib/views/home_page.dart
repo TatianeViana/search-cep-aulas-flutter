@@ -4,12 +4,22 @@ import 'package:search_cep/temas/themes_black.dart';
 import 'package:search_cep/temas/themes_light.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:share/share.dart';
-  
+
 
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
+}
+
+
+
+class _HomePageState extends State<HomePage> {
+  var _searchCepController = TextEditingController();
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  
+  GlobalKey<FormState> _formResult = GlobalKey<FormState>();
+
 }
 
 class _HomePageState extends State<HomePage> {
@@ -47,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   )],
                 ),
-    ),
+    
 
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20.0),
@@ -78,7 +88,11 @@ class _HomePageState extends State<HomePage> {
     return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: RaisedButton(
-        onPressed: _searchCep,
+        onPressed: (){
+           if (_formKey.currentState.validate()){
+            _searchCep();
+           }
+        },
         child: _loading ? _circularLoading() : Text('Consultar'),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
@@ -92,6 +106,7 @@ class _HomePageState extends State<HomePage> {
       _enableField = !enable;
     });
   }
+
 
   Widget _circularLoading() {
     return Container(

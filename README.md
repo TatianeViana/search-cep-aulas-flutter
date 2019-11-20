@@ -21,7 +21,7 @@ Tutorial de criação deste app: http://bit.ly/2kcGFQh
 -   Criar um formulário para adicionar todas os campos do JSON ([formulários](https://flutter.dev/docs/cookbook/forms))
 -   Validar o campo de digitação de CEP ([validações em flutter](https://medium.com/@nitishk72/form-validation-in-flutter-d762fbc9212c))
 -   Tratar todas [exceções](https://www.youtube.com/watch?v=qAzxZJ8NRwI) e utilize [Flushbar](https://pub.dev/packages/flushbar) para exibir os erros para o usuário
--   Adicionar um IconButton na AppBar para compartilhar o CEP (utilize o [plugin share](https://pub.dev/packages/share))
+-[x] Adicionar um IconButton na AppBar para compartilhar o CEP (utilize o [plugin share](https://pub.dev/packages/share))
 
 ## Licença
 
